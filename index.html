@@ -2,9 +2,32 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<title></title>
-</head>
-<body>
+	<title>W3C SQL Editor with Turkish Database</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body style="padding: 15px">
+
+Listelemek için tablo seçin:
+<ul id="tables" class="list-group" style="width: 250px">
+</ul>
+
+
+<textarea id="txtSqlQuery" placeholder="Çalıştırmak için bir SQL Sorgusu girin" class="form-control"></textarea>
+<button style="float: right; margin-top: 9px" type="button" class="btn btn-success btn-lg">Çalıştır</button>
+<br/><br/><br/><br/>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">SQL Sorgusu Sonucu</h3>
+	</div>
+	<div class="panel-body">
+		Henüz bir SQL sorgusu çalıştırmadınız!
+	</div>
+</div>
 </body>
 </html>
