@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by AtinaSoft.
+ * Created by Atinasoft.
  * Project: w3c-sql-editor-with-turkish-database
  * User: Eren
  * Date: 12.12.2014
