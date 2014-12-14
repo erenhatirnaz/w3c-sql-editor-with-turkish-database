@@ -3,6 +3,8 @@
  */
 
 $(function () {
+    $("#txtSqlQuery").autosize();
+
     $.post("get-tables.php", function(r){
         r = JSON.parse(r);
 
