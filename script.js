@@ -29,34 +29,43 @@ $(function () {
 
                 $("#result").removeClass("panel-default").removeClass("panel-danger").addClass("panel-success");
 
-                var table = "<table class='table table-striped'>" +
+                var result = "<h4>Çalıştırdığınız Sorgu</h4>" +
+                    "<pre><code class='sql'>"+$("#txtSqlQuery").val()+"</code></pre>" +
+                    "<br/><h3>Sonuç</h3>" +
+                    "<table class='table table-striped'>" +
                     "<thead>" +
                     "<tr>";
                 for(var columnName in resp.columnNames){
-                    table += "<td><strong>"+resp.columnNames[columnName]+"</strong></td>";
+                    result += "<td><strong>"+resp.columnNames[columnName]+"</strong></td>";
                 }
-                table += "</tr>" +
+                result += "</tr>" +
                 "</thead>" +
                 "<tbody>";
 
                 for(var data in resp.datas) {
-                    table += "<tr>";
+                    result += "<tr>";
 
                     for(var column in resp.datas[data]) {
-                        table += "<td>"+resp.datas[data][column]+"</td>";
+                        result += "<td>"+resp.datas[data][column]+"</td>";
                     }
 
-                    table += "</tr>";
+                    result += "</tr>";
                 }
 
-                table += "</tbody>" +
+                result += "</tbody>" +
                 "</table>";
 
-                $(".panel-body").html(table);
+                $(".panel-body").html(result);
+
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
             } catch (err){
                 $("#result").removeClass("panel-default").addClass("panel-danger");
                 $(".panel-body").html("<strong>Bir hata ile karşılaşıldı!</strong>");
             }
         });
+
+        $("#txtSqlQuery").autosize();
     });
 });
