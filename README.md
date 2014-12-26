@@ -1,4 +1,4 @@
-# W3C SQL Editor with Turkish Database [![Version](https://img.shields.io/badge/v1.0-beta-red.svg)](#) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT) 
+# W3C SQL Editor with Turkish Database [![Version](https://img.shields.io/badge/v1.0-beta-red.svg)](#) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/erenhatirnaz/w3c-sql-editor-with-turkish-database/blob/master/LICENSE) 
 
 W3C'deki SQL editörünün Türkçe veriler, tablo isimleri ve kolon isimleri kullanılarak hazırlanmış halidir. Projeyi geliştirme amacım eğitim alanında üniversitelerde olsun liselerde olsun ingilizce sıkınıtısı olan yerlerde kullanılabilecek bir Türkçe alternatif oluşturmak. Sistemi geliştirmeye devam edeceğim. Şimdilik v1.0 beta aşamasında çünkü daha keşfedilmeyi bekleyen hatalar olabilir. Sistemin kararlı halde çalıştığından emin olduğumda Release halini yayınlayacağım. Eğer bir hata keşfederseniz [yeni bir ıssues açarak](https://github.com/erenhatirnaz/w3c-sql-editor-with-turkish-database/issues/new) bana bildirebilir yada [e-posta](mailto:erenhatirnaz@hotmail.com.tr) yoluyla bana ulaşabilirsiniz.
 
