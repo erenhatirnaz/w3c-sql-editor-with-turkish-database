@@ -8,9 +8,6 @@
  * File: query-executer.php
  */
 
-function is_not_numeric($var){
-    return !is_numeric($var);
-}
 
 if($_POST) {
     $queryString = $_POST["queryString"];
@@ -22,14 +19,7 @@ if($_POST) {
     $query = $db->prepare($queryString);
     $query->execute();
 
-    //if($query->rowCount() > 0) {
-        $result = $query->fetchAll();
+    $result = $query->fetchAll();
 
-        $columnNames = array_keys($result[0]);
-        $columnNames = array( "columnNames" => array_filter($columnNames, "is_not_numeric") );
-
-        $datas = array( "datas" => array_values($result) );
-
-        echo json_encode(array_merge($columnNames, $datas));
-    //}
+    echo json_encode($result);
 }
