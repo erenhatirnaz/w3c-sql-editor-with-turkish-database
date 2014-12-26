@@ -1,5 +1,5 @@
 /**
- * Created by Eren Hatırnaz on 12.12.2014.
+ * Created by ErenHatirnaz on 12.12.2014.
  */
 
 function getAllDatas(tableName) {
@@ -19,7 +19,12 @@ function parseColumnNames(data) {
     return columnNames;
 }
 $(function () {
-    $("#txtSqlQuery").autosize();
+    $("#txtSqlQuery").autosize()
+        .bind('keydown', function (e) {
+            if (e.ctrlKey && e.keyCode === 13) {
+                $("#btnRun").click();
+            }
+        });
 
     $.getJSON("get-tables.php", function (tables) {
         for (var table in tables) {
@@ -44,15 +49,17 @@ $(function () {
             var datas = response,
                 columnNames = parseColumnNames(datas[0]);
 
+            $("#result").removeClass("panel-default").removeClass("panel-danger").addClass("panel-success");
+
             var result = "<h4>Çalıştırdığınız Sorgu</h4>" +
                 "<pre><code class='sql'>" + $("#txtSqlQuery").val() + "</code></pre>" +
-                "<br/><h3>Sonuç</h3>" +
-                "<strong>Bu tabloda <font color='red'>"+datas.length+"</font> adet kayıt bulunmaktadır.</strong>";
+                "<br/><h3>Sonuç</h3>";
 
-            if(typeof datas[0] === 'undefined') {
+            if (typeof datas[0] === 'undefined') {
                 result += "<strong>Bu tabloda hiç veri bulunmamaktadır!</strong>";
             } else {
-                result += "<table class='table table-striped'>" +
+                result += "<strong>Bu tabloda <font color='red'>" + datas.length + "</font> adet kayıt bulunmaktadır.</strong>" +
+                "<table class='table table-striped'>" +
                 "<thead>" +
                 "<tr>";
 
@@ -83,6 +90,11 @@ $(function () {
             $('pre code').each(function (i, block) {
                 hljs.highlightBlock(block);
             });
+        }).fail(function (a) {
+            var errorMessage = JSON.parse(a.responseText);
+
+            $("#result").removeClass("panel-default").addClass("panel-danger");
+            $(".panel-body").html("Bir hata ile karşılaşıldı: <strong>"+errorMessage["error"]+"</strong>");
         });
     });
 });

@@ -2,7 +2,7 @@
 /**
  * Created by Atinasoft.
  * Project: w3c-sql-editor-with-turkish-database
- * User: Eren
+ * User: ErenHatirnaz
  * Date: 12.12.2014
  * Time: 18:53
  * File: get-tables.php
@@ -11,7 +11,7 @@
 $db = new PDO("sqlite:database.db");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$getAllTables = $db->prepare("SELECT name FROM sqlite_master WHERE type='table'");
+$getAllTables = $db->prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name");
 $getAllTables->execute();
 
 $result = array();
