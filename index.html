@@ -6,22 +6,23 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-	<link rel="stylesheet" href="css/monokai_sublime.css">
+	<link rel="stylesheet" href="css/monokai_sublime.css" />
+	<link rel="stylesheet" href="css/style.css" />
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.autosize.min.js"></script>
 	<script type="text/javascript" src="js/highlight.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
-<body style="padding: 20px;">
+<body>
 
 Listelemek için tablo seçin:
-<ul id="tables" class="list-group" style="width: 250px">
+<ul id="tables" class="list-group">
 </ul>
 
 
-<textarea id="txtSqlQuery" style="resize: none;" placeholder="Çalıştırmak için bir SQL Sorgusu girin" class="form-control"></textarea>
-<button style="float: right; margin-top: 9px" type="button" class="btn btn-success btn-lg" id="btnRun">Sorguyu Çalıştır (Ctrl + Enter)</button>
+<textarea id="txtSqlQuery" placeholder="Çalıştırmak için bir SQL Sorgusu girin" class="form-control"></textarea>
+<button id="btnRun" type="button" class="btn btn-success btn-lg" >Sorguyu Çalıştır (Ctrl + Enter)</button>
 <br/><br/><br/><br/>
 
 <div class="panel panel-default" id="result">
@@ -33,9 +34,9 @@ Listelemek için tablo seçin:
 	</div>
 </div>
 <br/><br/>
-<div id="footer" style="padding-top:5px; position: fixed;bottom: 0; width: 100%; background-color: #EDEDED; color: #000; left:0; ">
+<div id="footer">
 	<div class="container">
-		<p class="muted credit" style="text-align: center">
+		<p class="muted credit" id="copyright">
 			Hazırlayan: Eren Hatırnaz - <a href="http://www.erenhatirnaz.kimdir.com">www.erenhatirnaz.kimdir.com</a> -
 			<a href="http://www.erenhatirnaz.wordpress.com">www.erenhatirnaz.wordpress.com</a>
 			<br/>

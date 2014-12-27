@@ -1,0 +1,30 @@
+body {
+    padding: 20px;
+}
+
+#tables {
+    width: 250px;
+}
+
+#txtSqlQuery {
+    resize: none;
+}
+
+#btnRun {
+    float: right;
+    margin-top: 9px;
+}
+
+#footer {
+    padding-top:5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #EDEDED;
+    color: #000;
+    left:0;
+}
+
+#copyright {
+    text-align: center;
+}
