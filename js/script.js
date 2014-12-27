@@ -58,7 +58,7 @@ $(function () {
             if (typeof datas[0] === 'undefined') {
                 result += "<strong>Bu tabloda hiç veri bulunmamaktadır!</strong>";
             } else {
-                result += "<strong>Bu tabloda <font color='red'>" + datas.length + "</font> adet kayıt bulunmaktadır.</strong>" +
+                result += "<strong>Bu tabloda <span style='color: red; '>" + datas.length + "</span> adet kayıt bulunmaktadır.</strong>" +
                 "<table class='table table-striped'>" +
                 "<thead>" +
                 "<tr>";
