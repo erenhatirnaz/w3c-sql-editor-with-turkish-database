@@ -5,8 +5,8 @@ W3C'deki [SQL editörünün](http://www.w3schools.com/sql/trysql.asp?filename=tr
 **NOT:  Veritabanındaki Türkçe kişi isimleri [Hüseyin Demirtaş](http://huseyindemirtas.net/) tarafından tamamen rastgele bir şekilde oluşturulmuştur. İlgili blog yazısı için [tıklayın](http://huseyindemirtas.net/rastgele-turkce-ad-soyad-kombinasyonlari/).**
 
 ## Eklenecekler Listesi / To - Do List
-- Rastgele veritabanı oluşturacak olan python scripti. - **Geliştirilme aşamasında...**
-- Veritabanı üzerinde yapılacak olan değişiklikleri geri alacak olan python scripti. - **Listede.**
+- Veritabanındaki verileri, her çalıştırıldığında rastgele bir şekilde oluşturacak php scripti. (random-database-generator.php) - **Geliştirilme aşamasında...**
+- Veritabanı üzerinde yapılacak olan değişiklikleri(UPDATE, DELETE, INSERT vb.) geri alacak olan php scripti. (reset-database.php) - **Listede.**
 
 ## Teşekkürler / Thanks
 - [Hüseyin Demirtaş](http://huseyindemirtas.net/)'a, derlemiş olduğu rastgele türkçe ad soyad listesini kullanmama izin verdiği için teşekkür ederim. 
