@@ -10,7 +10,10 @@
 
 header("Content-Type: text/plain; charset=utf8");
 
-unlink("database.db");
+if(file_exists("database.db") || file_exists("../database.db")){
+    unlink("database.db");
+    unlink("../database.db");
+}
 $db = new PDO("sqlite:database.db");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 echo "+ Veritabanı oluşturma işlemi başladı.\n\n";
