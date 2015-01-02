@@ -12,7 +12,8 @@
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.autosize.min.js"></script>
 	<script type="text/javascript" src="js/highlight.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/script.js"></script>-->
 </head>
 <body>
 
@@ -22,6 +23,20 @@ Listelemek için tablo seçin:
 
 
 <textarea id="txtSqlQuery" placeholder="Çalıştırmak için bir SQL Sorgusu girin" class="form-control"></textarea>
+<div class="btn-group" id="btnToolsDiv">
+	<button type="button" class="btn btn-primary btn-lg">
+		<span class="glyphicon glyphicon-cog"></span>
+		Araçlar
+	</button>
+	<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">Rastgele Veritabanı Oluştur</a></li>
+		<li><a href="#">Veritabanını Sıfırla</a></li>
+	</ul>
+</div>
 <button id="btnRun" type="button" class="btn btn-success btn-lg" >Sorguyu Çalıştır (Ctrl + Enter)</button>
 <br/><br/><br/><br/>
 
