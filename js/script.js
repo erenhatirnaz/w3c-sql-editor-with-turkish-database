@@ -19,6 +19,15 @@ function parseColumnNames(data) {
     return columnNames;
 }
 $(function () {
+    $("#databaseNotFoundModal").modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+    $("#btnCreateDatabase").click(function () {
+        $('#databaseNotFoundModal').modal('hide');
+    });
+
     $("#txtSqlQuery").autosize()
         .bind('keydown', function (e) {
             if (e.ctrlKey && e.keyCode === 13) {
@@ -35,6 +44,8 @@ $(function () {
 
             $("#tables").append(tableHtmlData);
         }
+    }).fail(function (e) {
+        $("#databaseNotFoundModal").modal('show');
     });
 
     $("#btnRun").click(function () {
@@ -94,7 +105,7 @@ $(function () {
             var errorMessage = JSON.parse(a.responseText);
 
             $("#result").removeClass("panel-default").addClass("panel-danger");
-            $(".panel-body").html("Bir hata ile karşılaşıldı: <strong>"+errorMessage["error"]+"</strong>");
+            $(".panel-body").html("Bir hata ile karşılaşıldı: <strong>" + errorMessage["error"] + "</strong>");
         });
     });
 });

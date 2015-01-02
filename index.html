@@ -17,6 +17,24 @@
 </head>
 <body>
 
+<div class="modal fade" id="databaseNotFoundModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Veritabanı dosyası bulunamadı!</h4>
+			</div>
+			<div class="modal-body">
+				<p><strong>Veritabanı dosyası oluşturulmamış! Hemen bir veritabanı oluşturmak için '<span
+						style="color: #337ab7;">Oluştur</span>' butonuna tıklayın.</strong></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="btnCreateDatabase" class="btn btn-primary btn-lg">Oluştur</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 Listelemek için tablo seçin:
 <ul id="tables" class="list-group">
 </ul>
