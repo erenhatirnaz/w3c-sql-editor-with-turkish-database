@@ -19,11 +19,6 @@ function parseColumnNames(data) {
     return columnNames;
 }
 $(function () {
-    $("#databaseNotFoundModal").modal({
-        backdrop: 'static',
-        keyboard: false
-    });
-
     $("#btnCreateDatabase").click(function () {
         $('#databaseNotFoundModal').modal('hide');
     });
@@ -45,6 +40,11 @@ $(function () {
             $("#tables").append(tableHtmlData);
         }
     }).fail(function (e) {
+        $("#databaseNotFoundModal").modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+
         $("#databaseNotFoundModal").modal('show');
     });
 
