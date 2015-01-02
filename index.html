@@ -34,6 +34,27 @@
 	</div>
 </div>
 
+<div class="modal fade" id="randomDatabaseGeneratorModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Rastgele veritabanınız oluşturuluyor lütfen bekleyin!</h4>
+			</div>
+			<div class="modal-body">
+				<iframe id="page" style="width: 100%; height: 550px" frameborder="0"></iframe>
+			</div>
+			<div class="modal-footer">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+						<span class="sr-only"></span>
+					</div>
+				</div>
+				<button id="btnSuccessfully" class="btn btn-success btn-lg" onclick="location.reload()" disabled>Tamamlandı</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 Listelemek için tablo seçin:
 <ul id="tables" class="list-group">
@@ -50,7 +71,7 @@ Listelemek için tablo seçin:
 		<span class="caret"></span> <span class="sr-only"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><a href="#">Rastgele Veritabanı Oluştur</a></li>
+		<li><a id="runRandomDatabaseGenerator" href="#">Rastgele Veritabanı Oluştur</a></li>
 		<li><a href="#">Veritabanını Sıfırla</a></li>
 	</ul>
 </div>
