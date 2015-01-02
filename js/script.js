@@ -21,6 +21,20 @@ function parseColumnNames(data) {
 $(function () {
     $("#btnCreateDatabase").click(function () {
         $('#databaseNotFoundModal').modal('hide');
+        $("#runRandomDatabaseGenerator").click();
+    });
+
+    $("#runRandomDatabaseGenerator").click(function () {
+        $("#randomDatabaseGeneratorModal").modal({
+            backdrop: 'static',
+            keyboard: false
+        })
+        $('#randomDatabaseGeneratorModal').modal('show');
+        $('#page').attr('src', './tools/random-database-generator.php')
+            .load(function () {
+                $('[role=progressbar]').addClass('progress-bar-success').removeClass('progress-bar-striped').removeClass('active');
+                $('#btnSuccessfully').removeAttr('disabled');
+            });
     });
 
     $("#txtSqlQuery").autosize()
@@ -43,9 +57,7 @@ $(function () {
         $("#databaseNotFoundModal").modal({
             backdrop: 'static',
             keyboard: false
-        });
-
-        $("#databaseNotFoundModal").modal('show');
+        }).modal('show');
     });
 
     $("#btnRun").click(function () {
