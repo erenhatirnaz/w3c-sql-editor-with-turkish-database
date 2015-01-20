@@ -29,7 +29,7 @@ class RandomDatabaseGeneratorTest extends PHPUnit_Framework_TestCase {
      * @test
      */
     public function testIsCreatedDatabaseFile() {
-        $this->assertTrue(file_exists('database.db') || file_exists('../database.db'));
+        $this->assertTrue(file_exists('database.db'));
     }
 
     /**
