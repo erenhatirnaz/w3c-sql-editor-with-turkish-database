@@ -15,7 +15,7 @@ class RandomDatabaseGeneratorTest extends PHPUnit_Framework_TestCase {
     private $db;
 
     protected function setUp() {
-        $this->deleteDatabaseFiles();
+        $this->deleteDatabaseFile();
 
         $this->generator = new RandomDatabaseGenerator();
         $this->generator->generateDatabase();
@@ -45,18 +45,15 @@ class RandomDatabaseGeneratorTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($databaseTables, $tableNames);
     }
 
-    private function deleteDatabaseFiles() {
+    private function deleteDatabaseFile() {
         if (file_exists("database.db")) {
             unlink("database.db");
-        }
-        if (file_exists("../database.db")) {
-            unlink("../database.db");
         }
     }
 
     protected function tearDown() {
         unset($this->generator);
         unset($this->db);
-        $this->deleteDatabaseFiles();
+        $this->deleteDatabaseFile();
     }
 }
