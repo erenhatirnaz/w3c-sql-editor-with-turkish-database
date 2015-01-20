@@ -8,5 +8,8 @@
       "name": "Eren Hatırnaz",
       "email": "erenhatirnaz@hotmail.com.tr"
     }
-  ]
+  ],
+  "require": {
+    "phpunit/phpunit": "4.6.x-dev"
+  }
 }
