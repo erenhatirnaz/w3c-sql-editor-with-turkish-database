@@ -307,8 +307,17 @@ class RandomDatabaseGenerator {
             }
         }
         echo "+ Veritabanınıza Siparişler ve Sipariş Detayları başarılı bir şekilde eklendi.\n\n";
-        copy('database.db', '../database.db');
-        echo "+ Rastgele veritabanınız başarılı bir şekilde oluşturuldu.";
+        echo "+ Rastgele veritabanınız başarılı bir şekilde oluşturuldu.\n";
+    }
+
+    /**
+     * @param string $path Database file location
+     */
+    public function copyDatabaseFileTo($path) {
+        if(file_exists('database.db')) {
+            copy('database.db', $path);
+            echo "+ Veritabanı dosyanız ana dizine kopyalandı.";
+        }
     }
 
     /**

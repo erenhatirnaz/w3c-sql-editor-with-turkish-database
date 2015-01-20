@@ -17,3 +17,4 @@ if (file_exists("../database.db")) { unlink("../database.db"); }
 
 $generator = new RandomDatabaseGenerator();
 $generator->generateDatabase();
+$generator->copyDatabaseFileTo('../database.db');
