@@ -1,0 +1,12 @@
+{
+  "name": "erenhatirnaz/w3c-sql-editor-with-turkish-database",
+  "description": "sql editor with turkish database",
+  "minimum-stability": "beta",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eren Hatırnaz",
+      "email": "erenhatirnaz@hotmail.com.tr"
+    }
+  ]
+}
