@@ -30,7 +30,7 @@ $(function () {
             keyboard: false
         })
         $('#randomDatabaseGeneratorModal').modal('show');
-        $('#page').attr('src', './tools/random-database-generator.php')
+        $('#page').attr('src', './tools/generator.php')
             .load(function () {
                 $('[role=progressbar]').addClass('progress-bar-success').removeClass('progress-bar-striped').removeClass('active');
                 $('#btnSuccessfully').removeAttr('disabled');

@@ -19,8 +19,6 @@ class RandomDatabaseGenerator {
     }
 
     public function generateDatabase() {
-        header("Content-Type: text/plain; charset=utf8");
-
         echo "+ Veritabanı oluşturma işlemi başladı.\n\n";
         echo "+ Tablolar oluşturuluyor: \n";
 
@@ -342,9 +340,3 @@ class RandomDatabaseGenerator {
         unset($this->kisiler);
     }
 }
-
-if (file_exists("database.db"))    { unlink("database.db"); }
-if (file_exists("../database.db")) { unlink("../database.db"); }
-
-$generator = new RandomDatabaseGenerator();
-$generator->generateDatabase();
