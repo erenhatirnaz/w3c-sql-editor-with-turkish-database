@@ -8,6 +8,7 @@
  * Time: 15:46
  * File: random-database-generator.php
  */
+define('CURRENT_DIRECTORY', dirname(__FILE__));
 class RandomDatabaseGenerator {
     private $db;
     private $kisiler;
@@ -15,7 +16,7 @@ class RandomDatabaseGenerator {
     function __construct() {
         $this->db = new PDO("sqlite:database.db");
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $this->kisiler = file(getcwd() . '\\turkce-ad-soyad-listesi.txt'); // Derleme Hüseyin Demirtaş'a aittir. Kaynak: http://huseyindemirtas.net/kullanici-adi-listesi-ad-soyad-listesi/
+        $this->kisiler = file(CURRENT_DIRECTORY . DIRECTORY_SEPARATOR . 'turkce-ad-soyad-listesi.txt'); // Derleme Hüseyin Demirtaş'a aittir. Kaynak: http://huseyindemirtas.net/kullanici-adi-listesi-ad-soyad-listesi/
     }
 
     public function generateDatabase() {
