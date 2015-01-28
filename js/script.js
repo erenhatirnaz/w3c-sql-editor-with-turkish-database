@@ -13,12 +13,32 @@ function parseColumnNames(data) {
     var columnNames = [];
 
     for (var columnName in data) {
-        columnNames.push(columnName);
+        if (data.hasOwnProperty(columnName)) {
+            columnNames.push(columnName);
+        }
     }
 
     return columnNames;
 }
+
 $(function () {
+    $("#btnCreateDatabase").click(function () {
+        $('#databaseNotFoundModal').modal('hide');
+        $("#runRandomDatabaseGenerator").click();
+    });
+
+    $("#runRandomDatabaseGenerator").click(function () {
+        $("#randomDatabaseGeneratorModal").modal({
+            backdrop: 'static',
+            keyboard: false
+        }).modal('show');
+        $('#page').attr('src', './tools/generator.php')
+            .load(function () {
+                $('[role=progressbar]').addClass('progress-bar-success').removeClass('progress-bar-striped').removeClass('active');
+                $('#btnSuccessfully').removeAttr('disabled');
+            });
+    });
+
     $("#txtSqlQuery").autosize()
         .bind('keydown', function (e) {
             if (e.ctrlKey && e.keyCode === 13) {
@@ -28,13 +48,19 @@ $(function () {
 
     $.getJSON("get-tables.php", function (tables) {
         for (var table in tables) {
-            var tableHtmlData = "<li class='list-group-item'>" +
-                "<span class='badge'>" + tables[table] + "</span>" +
-                "<a href='#' onclick='getAllDatas(this.id)' id='tbl" + table + "'>" + table + "</a>" +
-                "</li>";
-
-            $("#tables").append(tableHtmlData);
+            if(tables.hasOwnProperty(table)) {
+                var tableHtmlData = "<li class='list-group-item'>" +
+                    "<span class='badge'>" + tables[table] + "</span>" +
+                    "<a href='#' onclick='getAllDatas(this.id)' id='tbl" + table + "'>" + table + "</a>" +
+                    "</li>";
+                $("#tables").append(tableHtmlData);
+            }
         }
+    }).fail(function () {
+        $("#databaseNotFoundModal").modal({
+            backdrop: 'static',
+            keyboard: false
+        }).modal('show');
     });
 
     $("#btnRun").click(function () {
@@ -64,7 +90,9 @@ $(function () {
                 "<tr>";
 
                 for (var columnName in columnNames) {
-                    result += "<td><strong>" + columnNames[columnName] + "</strong></td>";
+                    if(columnNames.hasOwnProperty(columnName)) {
+                        result += "<td><strong>" + columnNames[columnName] + "</strong></td>";
+                    }
                 }
 
                 result += "</tr>" +
@@ -74,10 +102,13 @@ $(function () {
                 for (var row in datas) {
                     result += "<tr>";
 
-                    for (var column in datas[row]) {
-                        result += "<td>" + datas[row][column] + "</td>";
+                    if(datas.hasOwnProperty(row)) {
+                        for (var column in datas[row]) {
+                            if(datas[row].hasOwnProperty(column)) {
+                                result += "<td>" + datas[row][column] + "</td>";
+                            }
+                        }
                     }
-
                     result += "</tr>";
                 }
 
@@ -94,7 +125,7 @@ $(function () {
             var errorMessage = JSON.parse(a.responseText);
 
             $("#result").removeClass("panel-default").addClass("panel-danger");
-            $(".panel-body").html("Bir hata ile karşılaşıldı: <strong>"+errorMessage["error"]+"</strong>");
+            $(".panel-body").html("Bir hata ile karşılaşıldı: <strong>" + errorMessage["error"] + "</strong>");
         });
     });
 });

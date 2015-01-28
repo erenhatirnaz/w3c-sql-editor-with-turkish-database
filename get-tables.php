@@ -8,20 +8,25 @@
  * File: get-tables.php
  */
 
-$db = new PDO("sqlite:database.db");
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+if (file_exists('database.db')) {
+    $db = new PDO("sqlite:database.db");
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$getAllTables = $db->prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name");
-$getAllTables->execute();
+    $getAllTables = $db->prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name");
+    $getAllTables->execute();
 
-$result = array();
+    $result = array();
 
-foreach($getAllTables->fetchAll() as $fetch) {
-    $tableName = $fetch["name"];
-    if($tableName != "sqlite_sequence") {
-        $tableDataCount = $db->query("SELECT COUNT(*) FROM " . $tableName)->fetchColumn();
-        $result[$tableName] = $tableDataCount;
+    foreach ($getAllTables->fetchAll() as $fetch) {
+        $tableName = $fetch["name"];
+        if ($tableName != "sqlite_sequence") {
+            $tableDataCount = $db->query("SELECT COUNT(*) FROM " . $tableName)->fetchColumn();
+            $result[$tableName] = $tableDataCount;
+        }
     }
-}
 
-echo json_encode($result);
+    echo json_encode($result);
+} else {
+    http_response_code(501);
+    echo json_encode(array( 'error' => 'Database file not found!' ));
+}

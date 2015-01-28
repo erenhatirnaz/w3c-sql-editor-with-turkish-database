@@ -10,6 +10,10 @@ body {
     resize: none;
 }
 
+#btnToolsDiv
+{
+    margin-top: 9px;
+}
 #btnRun {
     float: right;
     margin-top: 9px;
