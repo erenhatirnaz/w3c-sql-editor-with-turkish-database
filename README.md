@@ -28,6 +28,7 @@ Eğer bu yöntemler ile de veritabanınızı oluşturamadıysanız lütfen aldı
 ## Eklenecekler Listesi / To - Do List
 - Veritabanındaki verileri, her çalıştırıldığında rastgele bir şekilde oluşturacak php scripti. - **Tamamlandı ✓**
 - Veritabanı üzerinde yapılacak olan değişiklikleri(UPDATE, DELETE, INSERT vb.) geri alacak olan php scripti. - **Listede.**
+- Kurulum aşamalarını anlatan dökümantasyon. - **Listede.**
 
 ## Teşekkürler / Thanks
 - [Hüseyin Demirtaş](http://huseyindemirtas.net/)'a, derlemiş olduğu rastgele türkçe ad soyad listesini kullanmama izin verdiği için teşekkür ederim. 
