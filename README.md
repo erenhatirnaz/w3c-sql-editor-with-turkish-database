@@ -30,6 +30,9 @@ Eğer bu yöntemler ile de veritabanınızı oluşturamadıysanız lütfen aldı
 - Veritabanı üzerinde yapılacak olan değişiklikleri(UPDATE, DELETE, INSERT vb.) geri alacak olan php scripti. - **Listede.**
 - Kurulum aşamalarını anlatan dökümantasyon. - **Listede.**
 
+## Ekran Görüntüsü / Screenshot
+![Screenshot](https://github.com/erenhatirnaz/w3c-sql-editor-with-turkish-database/blob/master/screenshot.gif)
+
 ## Teşekkürler / Thanks
 - [Hüseyin Demirtaş](http://huseyindemirtas.net/)'a, derlemiş olduğu rastgele türkçe ad soyad listesini kullanmama izin verdiği için teşekkür ederim. 
 
