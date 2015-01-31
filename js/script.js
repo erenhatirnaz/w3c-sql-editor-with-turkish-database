@@ -39,6 +39,17 @@ $(function () {
             });
     });
 
+    $("#runResetDatabase").click(function () {
+        $("#resetDatabaseModal").modal({
+            backdrop: 'static',
+            keyboard: false
+        }).modal('show');
+        $("#resetDatabasePage").attr('src', './tools/reset-database.php')
+            .load(function () {
+                $("#btnResetSuccessfully").removeAttr('disabled');
+            });
+    });
+
     $("#txtSqlQuery").autosize()
         .bind('keydown', function (e) {
             if (e.ctrlKey && e.keyCode === 13) {
@@ -48,7 +59,7 @@ $(function () {
 
     $.getJSON("get-tables.php", function (tables) {
         for (var table in tables) {
-            if(tables.hasOwnProperty(table)) {
+            if (tables.hasOwnProperty(table)) {
                 var tableHtmlData = "<li class='list-group-item'>" +
                     "<span class='badge'>" + tables[table] + "</span>" +
                     "<a href='#' onclick='getAllDatas(this.id)' id='tbl" + table + "'>" + table + "</a>" +
@@ -90,7 +101,7 @@ $(function () {
                 "<tr>";
 
                 for (var columnName in columnNames) {
-                    if(columnNames.hasOwnProperty(columnName)) {
+                    if (columnNames.hasOwnProperty(columnName)) {
                         result += "<td><strong>" + columnNames[columnName] + "</strong></td>";
                     }
                 }
@@ -102,9 +113,9 @@ $(function () {
                 for (var row in datas) {
                     result += "<tr>";
 
-                    if(datas.hasOwnProperty(row)) {
+                    if (datas.hasOwnProperty(row)) {
                         for (var column in datas[row]) {
-                            if(datas[row].hasOwnProperty(column)) {
+                            if (datas[row].hasOwnProperty(column)) {
                                 result += "<td>" + datas[row][column] + "</td>";
                             }
                         }
