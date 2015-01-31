@@ -27,7 +27,7 @@ Eğer bu yöntemler ile de veritabanınızı oluşturamadıysanız lütfen aldı
 
 ## Eklenecekler Listesi / To - Do List
 - Veritabanındaki verileri, her çalıştırıldığında rastgele bir şekilde oluşturacak php scripti. - **Tamamlandı ✓**
-- Veritabanı üzerinde yapılacak olan değişiklikleri(UPDATE, DELETE, INSERT vb.) geri alacak olan php scripti. - **Listede.**
+- Veritabanı üzerinde yapılacak olan değişiklikleri(UPDATE, DELETE, INSERT vb.) geri alacak olan php scripti. - **Geliştirme aşamasında...**
 - Kurulum aşamalarını anlatan dökümantasyon. - **Listede.**
 
 ## Ekran Görüntüsü / Screenshot
