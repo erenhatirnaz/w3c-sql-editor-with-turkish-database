@@ -55,6 +55,21 @@
 	</div>
 </div>
 
+<div class="modal fade" id="resetDatabaseModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Veritabanınız sınıflanıyor!</h4>
+			</div>
+			<div class="modal-body">
+				<iframe id="resetDatabasePage" style="width: 100%; height: 550px" frameborder="0"></iframe>
+			</div>
+			<div class="modal-footer">
+				<button id="btnResetSuccessfully" class="btn btn-success btn-lg" onclick="location.reload()" disabled>Tamamlandı</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 Listelemek için tablo seçin:
 <ul id="tables" class="list-group">
@@ -72,7 +87,7 @@ Listelemek için tablo seçin:
 	</button>
 	<ul class="dropdown-menu" role="menu">
 		<li><a id="runRandomDatabaseGenerator" href="#">Rastgele Veritabanı Oluştur</a></li>
-		<li><a href="#">Veritabanını Sıfırla</a></li>
+		<li><a id="runResetDatabase" href="#">Veritabanını Sıfırla</a></li>
 	</ul>
 </div>
 <button id="btnRun" type="button" class="btn btn-success btn-lg">Sorguyu Çalıştır (Ctrl + Enter)</button>
