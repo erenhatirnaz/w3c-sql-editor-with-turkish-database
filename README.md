@@ -1,4 +1,4 @@
-# W3C SQL Editor with Turkish Database [![Version](https://img.shields.io/badge/v1.0-beta-red.svg)](#) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/erenhatirnaz/w3c-sql-editor-with-turkish-database/blob/master/LICENSE) [![For Education](https://img.shields.io/badge/for-education-green.svg)](#) 
+# W3C SQL Editor with Turkish Database [![Version](https://img.shields.io/badge/version-1.0.0--stable-green.svg)](#) [![Build Status](https://travis-ci.org/erenhatirnaz/w3c-sql-editor-with-turkish-database.svg?branch=master)](https://travis-ci.org/erenhatirnaz/w3c-sql-editor-with-turkish-database) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/erenhatirnaz/w3c-sql-editor-with-turkish-database/blob/master/LICENSE) [![For Education](https://img.shields.io/badge/for-education-green.svg)](#) 
 
 W3C'deki [SQL editörünün](http://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) Türkçe veriler, tablo isimleri ve kolon isimleri kullanılarak hazırlanmış halidir. Projeyi geliştirme amacım eğitim alanında üniversitelerde olsun liselerde olsun ingilizce sıkınıtısı olan yerlerde kullanılabilecek bir Türkçe alternatif oluşturmak. Sistemi geliştirmeye devam edeceğim. Eğer bir hata keşfederseniz [yeni bir ıssues açarak](https://github.com/erenhatirnaz/w3c-sql-editor-with-turkish-database/issues/new) bana bildirebilir yada [e-posta](mailto:erenhatirnaz@hotmail.com.tr) yoluyla bana ulaşabilirsiniz.
 
@@ -27,7 +27,7 @@ Eğer bu yöntemler ile de veritabanınızı oluşturamadıysanız lütfen aldı
 
 ## Eklenecekler Listesi / To - Do List
 - Veritabanındaki verileri, her çalıştırıldığında rastgele bir şekilde oluşturacak php scripti. - **Tamamlandı ✓**
-- Veritabanı üzerinde yapılacak olan değişiklikleri(UPDATE, DELETE, INSERT vb.) geri alacak olan php scripti. - **Geliştirme aşamasında...**
+- Veritabanı üzerinde yapılacak olan değişiklikleri(UPDATE, DELETE, INSERT vb.) geri alacak olan php scripti. - **Tamamlandı ✓**
 - Kurulum aşamalarını anlatan dökümantasyon. - **Listede.**
 
 ## Ekran Görüntüsü / Screenshot
