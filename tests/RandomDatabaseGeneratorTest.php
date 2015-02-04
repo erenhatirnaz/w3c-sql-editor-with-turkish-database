@@ -7,8 +7,6 @@
  * Time: 14:27
  * File: RandomDatabaseGeneratorTest.php
  */
-define('ROOT_PATH', dirname(dirname(__FILE__)));
-require_once(ROOT_PATH . DIRECTORY_SEPARATOR . 'tools' . DIRECTORY_SEPARATOR . 'RandomDatabaseGenerator.class.php');
 
 class RandomDatabaseGeneratorTest extends PHPUnit_Framework_TestCase {
     private $generator;
@@ -17,7 +15,7 @@ class RandomDatabaseGeneratorTest extends PHPUnit_Framework_TestCase {
     protected function setUp() {
         $this->deleteDatabaseFile();
 
-        $this->generator = new RandomDatabaseGenerator();
+        $this->generator = new Tools\RandomDatabaseGenerator();
         $this->generator->generateDatabase();
 
         $this->db = new PDO("sqlite:database.db");

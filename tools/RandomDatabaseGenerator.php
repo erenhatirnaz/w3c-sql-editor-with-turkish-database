@@ -1,4 +1,4 @@
-<?php
+<?php namespace Tools;
 
 /**
  * Created by Atinasoft.
@@ -8,6 +8,8 @@
  * Time: 15:46
  * File: random-database-generator.php
  */
+use PDO;
+
 define('CURRENT_DIRECTORY', dirname(__FILE__));
 class RandomDatabaseGenerator {
     private $db;

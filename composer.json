@@ -11,5 +11,8 @@
   ],
   "require": {
     "phpunit/phpunit": "4.6.x-dev"
+  },
+  "autoload": {
+    "psr-4": {"Tools\\": "tools"}
   }
 }
