@@ -8,7 +8,7 @@
  * File: reset-database.php
  */
 define("ROOT_PATH", dirname(dirname(__FILE__)));
-require_once("RandomDatabaseGenerator.class.php");
+define("CURRENT_DIRECTORY", dirname(__FILE__));
 
 header("Content-Type:text/plain; charset=utf8");
 

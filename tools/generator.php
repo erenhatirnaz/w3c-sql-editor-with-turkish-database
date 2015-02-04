@@ -8,7 +8,7 @@
  * File: genetator.php
  */
 define("ROOT_PATH", dirname(dirname(__FILE__)));
-require_once("RandomDatabaseGenerator.class.php");
+require_once(ROOT_PATH."/vendor/autoload.php");
 
 header("Content-Type:text/plain; charset=utf8;");
 
@@ -19,6 +19,6 @@ if (file_exists(ROOT_PATH . DIRECTORY_SEPARATOR . "database.db")) {
     unlink(ROOT_PATH . DIRECTORY_SEPARATOR . "database.db");
 }
 
-$generator = new RandomDatabaseGenerator();
+$generator = new Tools\RandomDatabaseGenerator();
 $generator->generateDatabase();
 $generator->copyDatabaseFileTo(ROOT_PATH . DIRECTORY_SEPARATOR .'database.db');
