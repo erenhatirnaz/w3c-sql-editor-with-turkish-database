@@ -1,7 +1,7 @@
 {
   "name": "erenhatirnaz/w3c-sql-editor-with-turkish-database",
   "description": "W3C sitesindeki SQL Editörünün, Türkçe veritabanı ile hazırlanmış halidir.",
-  "minimum-stability": "stable",
+  "minimum-stability": "beta",
   "license": "MIT",
   "authors": [
     {
