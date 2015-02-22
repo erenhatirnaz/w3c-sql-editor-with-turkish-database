@@ -8,7 +8,7 @@
  * File: genetator.php
  */
 define("ROOT_PATH", dirname(dirname(__FILE__)));
-require_once(ROOT_PATH."/vendor/autoload.php");
+require_once("RandomDatabaseGenerator.php");
 
 header("Content-Type:text/plain; charset=utf8;");
 
