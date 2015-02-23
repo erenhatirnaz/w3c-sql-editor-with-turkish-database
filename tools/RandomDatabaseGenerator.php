@@ -140,7 +140,6 @@ class RandomDatabaseGenerator {
                 ':resim'      => $resim
             ));
         }
-        unset($kisiler);
 
         echo "+ Calisanlar tablosuna " . $eklenecekCalisanSayisi . " adet müşteri başarılı bir şekilde eklendi.\n";
 
