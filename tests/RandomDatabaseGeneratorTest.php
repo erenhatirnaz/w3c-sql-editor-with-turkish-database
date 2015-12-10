@@ -7,6 +7,8 @@
  * Time: 14:27
  * File: RandomDatabaseGeneratorTest.php
  */
+define("ROOT_PATH", dirname(dirname(__FILE__)));
+require_once(ROOT_PATH."/vendor/autoload.php");
 
 class RandomDatabaseGeneratorTest extends PHPUnit_Framework_TestCase {
     private $generator;
